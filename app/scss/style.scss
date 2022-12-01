@@ -114,6 +114,7 @@
     &__decor-br {
         position: absolute;
         bottom: 0;
+        right: 0;
     }
 
     &__decor-rc {
@@ -155,18 +156,8 @@
         display: flex;
     }
 
-    &__title {
-        font-size: 14px;
-        line-height: 15px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: $accent;
-        margin-bottom: 4px;
-        margin-top: 40px;
-    }
 
     &__title-descr {
-        @extend %title-descr;
         width: 480px;
         font-size: 40px;
         line-height: 54px;
@@ -176,7 +167,7 @@
     &__text-title {
         font-size: 18px;
         line-height: 28px;
-
+        margin-bottom: 11px;
     }
 
     &__text {
@@ -237,7 +228,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-bottom: 67px;
-      
+
     }
 
     &__list-item {
@@ -246,8 +237,9 @@
         text-align: center;
         position: relative;
         margin-top: 40px;
-        
+
     }
+
     &__list-img {
         position: absolute;
         right: 50%;
@@ -257,30 +249,32 @@
         z-index: 4;
     }
 
-   
+
     &__list-titleblue::before,
     &__list-titlegreen::before,
     &__list-titlered::before {
         content: '';
         position: absolute;
         width: 65px;
-        height: 65px;        
-        border-radius: 50%;       
+        height: 65px;
+        border-radius: 50%;
         top: -20px;
         left: 34%;
     }
-    &__list-titlered::before {      
-        background-color: #fff3ef;  
-        
+
+    &__list-titlered::before {
+        background-color: #fff3ef;
+
     }
 
-    &__list-titleblue::before {      
-        background-color: #ece7f1;        
+    &__list-titleblue::before {
+        background-color: #ece7f1;
     }
-    &__list-titlegreen::before {    
-        background-color: #f1f8ed;      
+
+    &__list-titlegreen::before {
+        background-color: #f1f8ed;
     }
-   
+
 
     &__list-title {
         font-size: 24px;
@@ -294,11 +288,487 @@
         line-height: 26px;
         color: $text;
     }
+
+    &__decor-inner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__decor-item {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(253, 133, 88, 0.2);
+        border-radius: 50%;
+        margin-bottom: 141px;
+        position: relative;
+    }
+
+    &__decor-item::before,
+    &__decor-item::after {
+        content: '';
+        min-width: 606px;
+        width: 100%;
+        height: 2px;
+        background-color: #f5f5f5;
+        position: absolute;
+
+    }
+
+    &__decor-item::before {
+        right: 120px;
+        top: 50%;
+
+    }
+
+    &__decor-item::after {
+        left: 120px;
+        top: 50%;
+    }
+}
+
+.works {
+
+    &__title-top {
+        font-size: 200px;
+        line-height: 180px;
+        text-align: right;
+        color: #F7F7F7;
+        margin-right: 12px;
+
+    }
+
+    &__title-box {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__btn {
+        align-self: end;
+    }
+
+    &__title-descr {
+        width: 312px;
+
+    }
+
+    &__grid-container {
+        display: grid;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-template-columns: 360px 1fr 360px;
+        grid-template-rows: repeat(2, 360px);
+        grid-auto-flow: dense;
+        margin-bottom: 85px;
+    }
+
+    &__grid-item {
+        min-width: 360px;
+        width: 100%;
+    }
+
+    &__grid-item--2 {
+        grid-column: 2 / 3;
+
+        img {
+            width: 720px;
+            height: 720px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__grid-item--5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+    }
+
+}
+
+
+.skills {
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        flex-basis: 100%;
+        margin-bottom: 151px;
+        flex-wrap: wrap;
+    }
+
+    &__title-descr {
+        max-width: 388px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    &__title-text {
+        max-width: 456px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 26px;
+        color: #999999;
+    }
+
+    &__info-box {
+        margin-right: 42px;
+    }
+
+    &__decor-box {
+        max-width: 570px;
+        width: 100%;
+    }
+
+    &__item {
+        margin-top: 45px;
+    }
+
+    &__item-box {
+        width: 100%;
+        border-bottom: 10px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 12px;
+    }
+
+    &__item-text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    &__line {
+        background: linear-gradient(90deg, #FF4B05 0%, #FFAE35 72.59%);
+        height: 10px;
+        margin-top: -10px;
+    }
+}
+
+.team {
+    &__inner {
+        margin-bottom: 115px;
+        text-align: center;
+
+    }
+
+    &__info-box {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 28px;
+    }
+
+    &__title-descr {
+        margin-bottom: 39px;
+        text-transform: capitalize;
+    }
+
+    &__list {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        grid-auto-flow: dense;
+        margin-bottom: 90px;
+    }
+
+    &__list-item {
+        max-width: 350px;
+        height: 350px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__list-img {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    &__list-box {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: #fff;
+    }
+
+    &__list-name {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__list-position {
+        font-size: 14px;
+        line-height: 24px;
+        color: #FCFCFC;
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}
+
+
+.testemonials {
+    &__inner {
+        padding: 70px 72px 215px 72px;
+        background-color: #3a0f73;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 122px;
+    }
+
+    &__title {
+        font-size: 200px;
+        line-height: 220px;
+        color: rgba(170, 170, 170, 0.1);
+        margin-bottom: 44px;
+    }
+
+    &__text {
+        max-width: 824px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 29px;
+        letter-spacing: 0.2px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 64px;
+    }
+
+    &__author-box {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    &__author-name {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    &__author-position {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+}
+
+.news {
+    &__title {
+        max-width: 170px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 45px;
+    }
+
+    &__title-descr {
+        max-width: 340px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 26px;
+    }
+
+    &__list-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+
+    &__item {
+        margin-bottom: 35px;
+    }
+
+    &__item+.news__item {
+        margin-left: 15px;
+    }
+
+    &__item-img {
+        max-width: 360px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 18px;
+    }
+
+    &__item-info {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__item-date {
+        margin-left: 30px;
+    }
+
+    &__item-category {
+        color: $accent;
+        max-width: 55px;
+        width: 100%;
+    }
+
+    &__item-category+.news__item-category {
+        margin-left: 10px;
+    }
+
+    &__item-title {
+        max-width: 326px;
+        width: 100%;
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 36px;
+    }
+
+    &__item-btn {
+        color: $accent;
+
+    }
+}
+
+.contacts {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+        flex-wrap: wrap;
+    }
+
+    &__info-box {
+        max-width: 293px;
+        width: 100%;
+
+    }
+
+    &__info-item {
+        margin-bottom: 45px;
+    }
+
+    &__info-name {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: rgba(34, 34, 34, 0.4);
+    }
+
+    &__info-adress,
+    &__info-email,
+    &__info-phone {
+        font-size: 24px;
+        line-height: 33px;
+        color: $default;
+    }
+
+    &__form {
+        max-width: 705px;
+        width: 100%;
+    }
+
+    &__form-input {
+        width: 338px;
+        padding: 18px 18px 18px 37px;
+        font-size: 14px;
+        line-height: 21px;
+        border: 1px solid #eee
+    }
+
+    &__form-input::placeholder {
+        color: $text;
+    }
+
+    &__form-textarea {
+        width: 100%;
+        min-height: 128px;
+        resize: none;
+        margin-top: 30px;
+        border: 1px solid #eee;
+        padding: 20px 40px;
+        margin-bottom: 65px;
+    }
+
+    &__input-box {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 
 
 .footer {
-    height: 100px;
-    background-color: #282828;
+    background-color: #111;
+
+    &__inner {
+        padding-top: 93px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 70px;
+        
+    }
+
+
+    &__logo-img {
+        max-width: 113px;
+        width: 100%;
+        margin-bottom: 27px;
+    }
+
+    &__phone,
+    &__email {
+        font-size: 15px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__email {
+        margin-left: 50px;
+    }
+
+    &__content-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-basis: 60%;
+    }
+    &__logo-box {
+        margin-right: 30px;
+    }
+
+    &__list {
+        max-width: 150px;
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    &__list-title {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 19px;
+    }
+
+    &__list-link {
+        font-size: 14px;
+        line-height: 20px;
+        color: #BABABA;
+        margin-bottom: 9px;
+    }
+
+    &__copy-text {
+        font-size: 15px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        color: #BABABA;
+        margin-bottom: 80px;
+    }
 }
