@@ -3,9 +3,10 @@
         font-size: 152px;
         line-height: 192px;
     }
+   
 }
 
-@media (max-width: 1115px) {
+@media (max-width: 1165px) {
 
     .about__item,
     .about__list {
@@ -57,6 +58,21 @@
     .testemonials__inner {
         padding: 70px 72px 115px 72px;
     }
+    .news__list-items {
+        flex-direction: column;
+    }
+    .news__item+.news__item {
+        margin-left: 0;
+    }
+    .news__list-items {
+        margin-bottom: 50px;
+    }
+    .contacts__inner {
+        justify-content: center;
+    }
+    .contacts__info-box {
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -68,12 +84,13 @@
     .header__decor-tr {
         top: 14px;
         right: 32px;
+     
     }
 
     .header__decor-br {
         position: absolute;
         bottom: 0;
-        right: -125px;
+      
     }
 
     .header__decor-rc {
@@ -86,6 +103,22 @@
         position: absolute;
         top: 0px;
         left: -70px;
+    }
+    .news__item-title {
+        margin-bottom: 20px;
+    }
+    .footer__inner {
+        justify-content: center;
+    }
+    .footer__logo-box {
+        margin-bottom: 50px;
+    }
+    .footer__logo-img {
+        display: flex;
+        margin: 0 auto 27px;
+    }
+    .footer__content-box {
+        flex-basis: 100%;
     }
 }
 
@@ -154,6 +187,7 @@
 
     .header__decor-tr {
         right: 10px;
+        max-width: 140px;
     }
 
     .header__decor-rc {
@@ -209,6 +243,20 @@
     .testemonials__text {
         width: 440px;
 
+    }
+
+    .contacts__input-box {
+        flex-direction: column;
+        align-items: center;
+      
+    }
+    .contacts__form-input {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .form__btn.btn {
+        display: flex;
+        margin: 0 auto;
     }
 }
 
@@ -277,6 +325,21 @@
         line-height: 20px;
         margin-bottom: 40px;
     }
+    .footer__content-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__list {
+        margin-bottom: 30px;
+    }
+    .footer__logo-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__email {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 414px) {
@@ -332,6 +395,11 @@
     .testemonials__text {
         width: 440px;
 
+    }
+    .contacts__info-adress, 
+    .contacts__info-email, 
+    .contacts__info-phone {
+        font-size: 22px;
     }
 
 }

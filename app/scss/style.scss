@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'libs';
+@import 'animation';
 @import 'global';
 
 
@@ -80,6 +81,10 @@
         background-color: #282828;
         border-radius: 50%;
         top: 40px;
+        animation-name: spinY;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
 
     }
 
@@ -102,6 +107,8 @@
         text-align: center;
         margin-bottom: 53px;
         z-index: 2;
+        animation-name: zoomIn;
+        animation-duration: 2s;
     }
 
     &__btn-box {
@@ -109,28 +116,46 @@
         z-index: 2;
     }
 
+    &__btn {
+        animation-name: fadeInLeft;
+        animation-duration: 2s;
+        
+    }
+
     &__btn:last-child {
         margin-left: 28px;
         background-color: transparent;
         border: 1px solid $accent;
+        animation-name: fadeInRight;
+        
     }
 
     &__decor-tr {
         position: absolute;
         top: 14px;
         right: 153px;
+        max-width: 180px;
+        width: 100%;
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 
     &__decor-br {
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: -354px;
     }
 
     &__decor-rc {
         position: absolute;
         top: 330px;
         right: 112px;
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 
     &__decor-lt {
@@ -143,6 +168,10 @@
         position: absolute;
         left: 83px;
         bottom: 130px;
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 
     &__burger {
@@ -172,6 +201,15 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+       
+        
+    }
+    &__content-box {
+        animation-name: fadeInLeft;
+        animation-duration: 1.5s;
+    }
+    &__content-box:last-child {
+        animation-name: fadeInRight;
     }
 
     &__item-2 {
@@ -181,6 +219,8 @@
 
     &__list {
         display: flex;
+        animation-name: flipInX;
+        animation-duration: 2s;
     }
 
 
@@ -218,6 +258,8 @@
         margin-bottom: 40px;
         object-fit: cover;
         border-radius: 20px;
+        animation-name: fadeInLeft;
+        animation-duration: 2s;
     }
 
     &__bloquote {
@@ -225,6 +267,8 @@
         width: 100%;
         align-self: center;
         margin-left: 65px;
+        animation-name: fadeInRight;
+        animation-duration: 2s;
 
     }
 
@@ -332,6 +376,8 @@
         border-radius: 50%;
         margin-bottom: 141px;
         position: relative;
+        animation-name: fadeIn;
+        animation-duration: 3s;
     }
 
     &__decor-item::before,
@@ -373,9 +419,15 @@
         justify-content: space-between;
 
     }
+    &__title-info {
+        animation-name: fadeInLeft;
+        animation-duration: 1.5s;
+    }
 
     &__btn {
         align-self: end;
+        animation-name: fadeInRight;
+        animation-duration: 1.5s;
     }
 
     &__title-descr {
@@ -396,10 +448,16 @@
     &__grid-item {
         width: 360px;        
         width: 100%;
+        animation-name: flipInY;
+        animation-duration: 1.6s;
     }
+  
 
     &__grid-item--2 {
         grid-column: 2 / 3;
+        animation-name: zoomIn !important;
+        animation-duration: 4.6s;
+        
         
 
         img {
@@ -413,6 +471,7 @@
     &__grid-item--5 {
         grid-column-start: 3;
         grid-column-end: 4;
+        animation-name: flipInX;
 
     }
 
@@ -444,11 +503,15 @@
 
     &__info-box {
         margin-right: 42px;
+        animation-name: fadeInLeft;
+        animation-duration: 2s;
     }
 
     &__decor-box {
         max-width: 570px;
         width: 100%;
+        animation-name: fadeInRight;
+        animation-duration: 2s;
     }
 
     &__item {
@@ -484,6 +547,8 @@
 
     &__info-box {
         text-align: center;
+        animation-name: fadeIn;
+        animation-duration: 2s;
     }
 
     &__title {
@@ -513,13 +578,40 @@
         max-width: 350px;
         height: 350px;
         width: 100%;
+        animation-name: fadeIn;
+        
+       
+    }
+    &__list-item:nth-child(1) {        
+        animation-duration: 2s;
+       
+    }   
+    
+    &__list-item:nth-child(2) {        
+        animation-duration: 3s;
+        
+    }   
+    &__list-item:nth-child(3) {        
+        animation-duration: 4s;
+       
+    } 
+    &__list-item:nth-child(4) {        
+        animation-duration: 5s;
+       
+    }
+    &__list-item:nth-child(5) {        
+        animation-duration: 6s;
+       
+    }
+    &__list-item:nth-child(6) {        
+        animation-duration: 6s;
        
     }
 
     &__list-img {
         max-width: 350px;
         width: 100%;
-        
+        border-radius: 20px;
         
     }
 
@@ -548,6 +640,8 @@
 
     &__btn {
         margin: 0 auto;
+        animation-name: flipInX;
+        animation-duration: 1.3s;
     }
 }
 
@@ -570,6 +664,8 @@
         line-height: 220px;
         color: rgba(170, 170, 170, 0.1);
         margin-bottom: 44px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
     }
 
     &__text {
@@ -581,12 +677,16 @@
         text-align: center;
         margin: 0 auto;
         margin-bottom: 64px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
     }
 
     &__author-box {
         display: flex;
         align-items: center;
         text-align: left;
+        animation-name: fadeIn;
+        animation-duration: 2s;
     }
 
     &__author-name {
@@ -607,6 +707,8 @@
         width: 100%;
         text-align: center;
         margin: 0 auto 45px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
     }
 
     &__title-descr {
@@ -614,6 +716,8 @@
         width: 100%;
         text-align: center;
         margin: 0 auto 26px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
     }
 
     &__list-items {
@@ -637,11 +741,16 @@
         width: 100%;
         object-fit: cover;
         margin-bottom: 18px;
+        border-radius: 20px;
+        animation-name: zoomIn;
+        animation-duration: 1.4s;
     }
 
     &__item-info {
         display: flex;
         margin-bottom: 20px;
+        animation-name: fadeIn;
+        animation-duration: 3s;
     }
 
     &__item-date {
@@ -664,10 +773,14 @@
         font-size: 24px;
         line-height: 33px;
         margin-bottom: 36px;
+        animation-name: fadeIn;
+        animation-duration: 2s;
     }
 
     &__item-btn {
         color: $accent;
+        animation-name: fadeIn;
+        animation-duration: 3.5s;
 
     }
 }
@@ -683,6 +796,8 @@
     &__info-box {
         max-width: 293px;
         width: 100%;
+        animation-name: fadeInLeft;
+        animation-duration: 2s;
 
     }
 
@@ -708,6 +823,8 @@
     &__form {
         max-width: 705px;
         width: 100%;
+        animation-name: fadeInRight;
+        animation-duration: 2s;
     }
 
     &__form-input {
@@ -715,7 +832,8 @@
         padding: 18px 18px 18px 37px;
         font-size: 14px;
         line-height: 21px;
-        border: 1px solid #eee
+        border: 1px solid #eee;
+        border-radius: 20px;
     }
 
     &__form-input::placeholder {
@@ -730,6 +848,7 @@
         border: 1px solid #eee;
         padding: 20px 40px;
         margin-bottom: 65px;
+        border-radius: 20px;
     }
 
     &__input-box {
@@ -779,13 +898,13 @@
     }
 
     &__logo-box {
-        margin-right: 30px;
+        margin-right: 35px;
     }
 
     &__list {
         max-width: 150px;
         width: 100%;
-        margin-left: 20px;
+        
     }
 
     &__list-title {
